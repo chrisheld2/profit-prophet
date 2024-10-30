@@ -2,7 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Company from './components/company/company';
-import LineChart from './components/LineChart';
+
+import Button from '@mui/material/Button';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
 
@@ -11,13 +17,13 @@ function App() {
 
   return (
     <div>
-      
-          version: {version}
-      
 
-      <h3>Chart</h3>
+      version: {version}
 
-        <Company></Company>
+
+      <Button variant="contained">Hello world</Button>
+
+      <Company></Company>
     </div>
   );
 }
