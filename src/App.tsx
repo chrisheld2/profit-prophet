@@ -14,6 +14,20 @@ function App() {
 
   const version: number = 1.0;
 
+  function test() {
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Weather data:', data);
+      })
+      .catch(error => {
+        console.error('Error fetching weather data:', error);
+      });
+  }
+
+
+
+
 
   return (
     <div>
@@ -21,7 +35,7 @@ function App() {
       version: {version}
 
 
-      <Button variant="contained">Hello world</Button>
+      <Button variant="contained" onClick={test}>Hello world</Button>
 
       <Company></Company>
     </div>
